@@ -765,7 +765,9 @@ WARN_LOGFILE           =
 # spaces. See also FILE_PATTERNS and EXTENSION_MAPPING
 # Note: If this tag is empty the current directory is searched.
 
-INPUT                  = common nvpr_svg
+INPUT                  = \
+                         common \
+                         nvpr_svg \
 
 # This tag can be used to specify the character encoding of the source files
 # that doxygen parses. Internally doxygen uses the UTF-8 encoding. Doxygen uses
@@ -1956,7 +1958,7 @@ ENABLE_PREPROCESSING   = YES
 # The default value is: NO.
 # This tag requires that the tag ENABLE_PREPROCESSING is set to YES.
 
-MACRO_EXPANSION        = NO
+MACRO_EXPANSION        = YES
 
 # If the EXPAND_ONLY_PREDEF and MACRO_EXPANSION tags are both set to YES then
 # the macro expansion is limited to the macros specified with the PREDEFINED and
@@ -1978,7 +1980,12 @@ SEARCH_INCLUDES        = YES
 # preprocessor.
 # This tag requires that the tag SEARCH_INCLUDES is set to YES.
 
-INCLUDE_PATH           = common
+INCLUDE_PATH           = \
+                         common \
+                         nvpr_svg \
+                         nvpr_svg/include \
+                         nvpr_svg/nvpr \
+                         nvpr_svg/stc \
 
 # You can use the INCLUDE_FILE_PATTERNS tag to specify one or more wildcard
 # patterns (like *.h and *.hpp) to filter out the header-files in the
@@ -2190,7 +2197,7 @@ UML_LOOK               = YES
 # Minimum value: 0, maximum value: 100, default value: 10.
 # This tag requires that the tag HAVE_DOT is set to YES.
 
-UML_LIMIT_NUM_FIELDS   = 10
+UML_LIMIT_NUM_FIELDS   = 20
 
 # If the TEMPLATE_RELATIONS tag is set to YES then the inheritance and
 # collaboration graphs will show the relations between templates and their
